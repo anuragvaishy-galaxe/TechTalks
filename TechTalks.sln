@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks", "TechTalks\TechTalks.csproj", "{058D7632-B38C-4646-A914-0C604C853509}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.Web", "TechTalks\TechTalks.Web.csproj", "{058D7632-B38C-4646-A914-0C604C853509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalksAPI", "TechTalksAPI\TechTalksAPI.csproj", "{AB5FACBE-470D-4E4D-84CF-997C3ECDC480}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.API", "TechTalksAPI\TechTalks.API.csproj", "{AB5FACBE-470D-4E4D-84CF-997C3ECDC480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.DomainObjects", "DomainObjects\TechTalks.DomainObjects.csproj", "{A0B63117-84B6-4AAE-8332-2D08A12CC3A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.BusinessLayer", "BusinessLayer\TechTalks.BusinessLayer.csproj", "{DCD944BF-7198-4041-BE3C-402683842DA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.DataAccessLayer", "DataAccessLayer\TechTalks.DataAccessLayer.csproj", "{3585CF80-B8A9-40D6-8BF6-64D9A23621A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{AB5FACBE-470D-4E4D-84CF-997C3ECDC480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB5FACBE-470D-4E4D-84CF-997C3ECDC480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB5FACBE-470D-4E4D-84CF-997C3ECDC480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B63117-84B6-4AAE-8332-2D08A12CC3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B63117-84B6-4AAE-8332-2D08A12CC3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B63117-84B6-4AAE-8332-2D08A12CC3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B63117-84B6-4AAE-8332-2D08A12CC3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD944BF-7198-4041-BE3C-402683842DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD944BF-7198-4041-BE3C-402683842DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD944BF-7198-4041-BE3C-402683842DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD944BF-7198-4041-BE3C-402683842DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3585CF80-B8A9-40D6-8BF6-64D9A23621A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3585CF80-B8A9-40D6-8BF6-64D9A23621A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3585CF80-B8A9-40D6-8BF6-64D9A23621A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3585CF80-B8A9-40D6-8BF6-64D9A23621A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
