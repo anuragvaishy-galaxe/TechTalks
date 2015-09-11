@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TTUtilities")]
+[assembly: AssemblyTitle("TeckTalks.BusinessLayer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hewlett-Packard Company")]
-[assembly: AssemblyProduct("TTUtilities")]
+[assembly: AssemblyProduct("TeckTalks.BusinessLayer")]
 [assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9a42988b-1cb0-4cab-a62c-40f06011a735")]
+[assembly: Guid("61799c4e-bb43-4897-b9d6-2554a95b02c1")]
 
 // Version information for an assembly consists of the following four values:
 //

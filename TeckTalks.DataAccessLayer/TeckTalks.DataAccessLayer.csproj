@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E3F05930-07E5-45B3-91A8-9FDACC28CCA5}</ProjectGuid>
+    <ProjectGuid>{660213C3-DAE6-4697-8014-BB9BBD4F531B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TTUtilities</RootNamespace>
-    <AssemblyName>TTUtilities</AssemblyName>
+    <RootNamespace>TeckTalks.DataAccessLayer</RootNamespace>
+    <AssemblyName>TeckTalks.DataAccessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

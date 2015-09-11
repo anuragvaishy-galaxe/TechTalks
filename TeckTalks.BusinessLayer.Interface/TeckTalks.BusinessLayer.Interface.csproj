@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E3F05930-07E5-45B3-91A8-9FDACC28CCA5}</ProjectGuid>
+    <ProjectGuid>{83C42A66-EB7E-402A-AF18-0509AF3FBAC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TTUtilities</RootNamespace>
-    <AssemblyName>TTUtilities</AssemblyName>
+    <RootNamespace>TeckTalks.BusinessLayer.Interface</RootNamespace>
+    <AssemblyName>TeckTalks.BusinessLayer.Interface</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
