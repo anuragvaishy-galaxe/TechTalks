@@ -12,7 +12,10 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">
+                    <p class="site-title">
+                     @Html.Raw(@Html.ActionLink("[replacetext]", "Index", "Home").ToHtmlString().Replace("[replacetext]", "<img src=\"/Images/TechTalk.png\" ... />"))
+                    </p>
                 </div>
                 <div class="float-right">
                     <section id="login">
