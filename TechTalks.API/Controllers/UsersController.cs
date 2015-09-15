@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Mvc.Routing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
+
 
 namespace SwaggerWebAPI.Controllers
 {
@@ -18,14 +21,17 @@ namespace SwaggerWebAPI.Controllers
         public string Password { get; set; }
         public string Email { get; set; }
     }
+   
     public class UsersController : ApiController
     {
         // GET api/values
+       
         public IEnumerable<User> Get()
         {
+            
             return GetUsers();
         }
-
+       
         private IEnumerable<User> GetUsers()
         {
             List<User> list = new List<User>();
@@ -56,6 +62,15 @@ namespace SwaggerWebAPI.Controllers
         public void Delete(int id)
         {
             
+        }
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.ActionName("GetPosts")]
+        public IEnumerable<User> GetPosts(int id)
+        {
+            List<User> list = new List<User>();
+            list.Add(new User { UserID = 5, UserName = "Deepali", Email = "user1@galaxe.com", DOB = "1/10/1990", FirstName = "Deepali" });
+            
+            return list;
         }
     }
 }
