@@ -1,5 +1,5 @@
 ﻿html {
-    background-color: #e2e2e2;
+    background-color: #33485e;
     margin: 0;
     padding: 0;
 }
@@ -37,7 +37,7 @@ nav, section {
 }
 
 mark {
-    background-color: #a6dbed;
+    background-color: #33485e;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -120,7 +120,7 @@ header .content-wrapper {
 
 footer {
     clear: both;
-    background-color: #e2e2e2;
+    background-color: #33485e;
     font-size: .8em;
     height: 100px;
 }
@@ -425,7 +425,7 @@ label.checkbox {
 }
 
 input, textarea {
-    border: 1px solid #e2e2e2;
+    border: 1px solid #33485e;
     background: #fff;
     color: #333;
     font-size: 1.2em;

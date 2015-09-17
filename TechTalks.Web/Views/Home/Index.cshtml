@@ -1,8 +1,54 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-
-<h3>We suggest the following:</h3>
-<ol class="round">
-  <p>Your content goes here</p>
-</ol>
+﻿@{ ViewBag.Title = "Home Page"; } @section featured {
+<div class="pad-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <div class="panel panel-default" style="min-height: 230px;">
+                    <div class="panel-heading">
+                        <h2 class="panel-title" style="font-weight: bold;">
+                            <span>General Discussions</span> <span style="float: right; padding-right: 200px;">Latest</span></h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="pull-left">
+                            <a href="#">Read More..</a>
+                        </div>
+                        <div style="float: right; padding-right: 170px;">
+                            <p>
+                                <a href="#">Reply:</a>
+                                <br />
+                                <a href="#">Posted BY</a>
+                                <br />
+                                <a href="#">Posted Date</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="panel panel-default" style="min-height: 230px;">
+                    <div class="panel-heading">
+                        <h2 class="panel-title" style="font-weight: bold;">
+                            <span>Data Access</span><span style="float: right; padding-right: 200px;">Latest</span></h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="pull-left">
+                            <a href="#">Read More..</a>
+                        </div>
+                        <div style="float: right; padding-right: 170px;">
+                            <p>
+                                <a href="#">Reply:</a>
+                                <br />
+                                <a href="#">Posted BY</a>
+                                <br />
+                                <a href="#">Posted Date</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+} 
