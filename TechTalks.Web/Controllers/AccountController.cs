@@ -14,7 +14,7 @@ using TechTalks.Web.Models;
 namespace TechTalks.Web.Controllers
 {
     [Authorize]
-    [InitializeSimpleMembership]
+    //[InitializeSimpleMembership]
     public class AccountController : Controller
     {
         //

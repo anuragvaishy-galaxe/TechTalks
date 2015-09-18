@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace TechTalks.Web.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()
