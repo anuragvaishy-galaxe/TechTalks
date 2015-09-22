@@ -41,7 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ManagePost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeckTalks.BusinessLayer.Interface\TechTalks.BusinessLayer.Interface.csproj">
+      <Project>{83C42A66-EB7E-402A-AF18-0509AF3FBAC6}</Project>
+      <Name>TechTalks.BusinessLayer.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

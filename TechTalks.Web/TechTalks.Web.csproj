@@ -41,6 +41,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetOpenAuth.AspNet">
       <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
     </Reference>
@@ -158,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\AutoFacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -1103,6 +1110,20 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeckTalks.BusinessLayer.Interface\TechTalks.BusinessLayer.Interface.csproj">
+      <Project>{83C42A66-EB7E-402A-AF18-0509AF3FBAC6}</Project>
+      <Name>TechTalks.BusinessLayer.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeckTalks.BusinessLayer\TechTalks.BusinessLayer.csproj">
+      <Project>{BFFCED2E-5374-4AD2-BC42-3E429DCB5270}</Project>
+      <Name>TechTalks.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeckTalks.DataAccessLayer\TechTalks.DataAccessLayer.csproj">
+      <Project>{660213C3-DAE6-4697-8014-BB9BBD4F531B}</Project>
+      <Name>TechTalks.DataAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
