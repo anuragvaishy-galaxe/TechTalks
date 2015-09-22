@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface", "Interface", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{14DF8609-2504-422E-9C05-68F747D1508C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeckTalks.BusinessLayer", "TeckTalks.BusinessLayer\TeckTalks.BusinessLayer.csproj", "{BFFCED2E-5374-4AD2-BC42-3E429DCB5270}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.BusinessLayer", "TeckTalks.BusinessLayer\TechTalks.BusinessLayer.csproj", "{BFFCED2E-5374-4AD2-BC42-3E429DCB5270}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeckTalks.DataAccessLayer", "TeckTalks.DataAccessLayer\TeckTalks.DataAccessLayer.csproj", "{660213C3-DAE6-4697-8014-BB9BBD4F531B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.DataAccessLayer", "TeckTalks.DataAccessLayer\TechTalks.DataAccessLayer.csproj", "{660213C3-DAE6-4697-8014-BB9BBD4F531B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeckTalks.DomainObjects", "TeckTalks.DomainObjects\TeckTalks.DomainObjects.csproj", "{B95C8156-528F-4BF6-92BF-1230678624DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.DomainObjects", "TeckTalks.DomainObjects\TechTalks.DomainObjects.csproj", "{B95C8156-528F-4BF6-92BF-1230678624DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeckTalks.BusinessLayer.Interface", "TeckTalks.BusinessLayer.Interface\TeckTalks.BusinessLayer.Interface.csproj", "{83C42A66-EB7E-402A-AF18-0509AF3FBAC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.BusinessLayer.Interface", "TeckTalks.BusinessLayer.Interface\TechTalks.BusinessLayer.Interface.csproj", "{83C42A66-EB7E-402A-AF18-0509AF3FBAC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeckTalks.DataAccessLayer.Interface", "TeckTalks.DataAccessLayer.Interface\TeckTalks.DataAccessLayer.Interface.csproj", "{1C9D7754-CDF5-4D60-B6A9-CD6345819F4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.DataAccessLayer.Interface", "TeckTalks.DataAccessLayer.Interface\TechTalks.DataAccessLayer.Interface.csproj", "{1C9D7754-CDF5-4D60-B6A9-CD6345819F4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTUtilities", "TTUtilities\TTUtilities.csproj", "{E3F05930-07E5-45B3-91A8-9FDACC28CCA5}"
 EndProject

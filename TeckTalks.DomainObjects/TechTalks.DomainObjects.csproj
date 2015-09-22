@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1C9D7754-CDF5-4D60-B6A9-CD6345819F4F}</ProjectGuid>
+    <ProjectGuid>{B95C8156-528F-4BF6-92BF-1230678624DF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeckTalks.DataAccessLayer.Interface</RootNamespace>
-    <AssemblyName>TeckTalks.DataAccessLayer.Interface</AssemblyName>
+    <RootNamespace>TechTalks.DomainObjects</RootNamespace>
+    <AssemblyName>TechTalks.DomainObjects</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="Posts.cs" />
+    <Compile Include="PostTags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ratings.cs" />
+    <Compile Include="Tags.cs" />
+    <Compile Include="Users.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
