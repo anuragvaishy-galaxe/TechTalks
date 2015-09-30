@@ -40,7 +40,10 @@ angular.module('app').service("TechService",function(){
             "SubmittedBy": topic.SubmittedBy,
             "Reviews": topic.Reviews,
             "Likes": topic.Likes,
-            "Content": topic.Content
+            "Content": topic.Content,
+            "createdDate":Date(),
+            "updatedDate":Date(),
+            "ReplyBy" : "None"
         };
         Topics.push(newtopic);
     }
@@ -55,8 +58,22 @@ angular.module('app').service("TechService",function(){
 })();
 
 var discussions = [
-{ Topic: "AngularJS Discussion", SubmittedBy: "Aura", Reviews: 5, Likes: 50,Content : "Whats new with Angular",ReplyBy : "Jim",createdDate : "2010/01/01",updatedDate : "2010/09/02"},
-{ Topic: "OWIN and KATANA", SubmittedBy: "Kanny", Reviews: 5, Likes: 30, Content: "Lets Discuss OWIN and KATANA",ReplyBy : "Doe",createdDate : "2010/10/10",updatedDate : "2010/08/01" },
-{ Topic: "SOLID Principles", SubmittedBy: "Jim", Reviews: 6, Likes: 150, Content: "Basic SOLID Principles",ReplyBy : "Kanny",createdDate : "2010/11/11",updatedDate : "2010/11/12" },
-{ Topic: "JQuery", SubmittedBy: "Doe", Reviews: 7, Likes: 300, Content: "JQuer OR AngularJS",ReplyBy : "Aura",createdDate : "2010/10/03",updatedDate : "2010/11/04"}
+{
+Topic: "AngularJS Discussion", 
+SubmittedBy: "Aura", Reviews: 5, Likes: 50,
+Content : [
+            {ContentDetails:"Whats new with Angular",ReplyBy : "Ken",updatedDate : "Wed Sep 03 2015 14:37:24 GMT+0530 (India Standard Time)"},
+            {ContentDetails:"WhyAngular",ReplyBy : "Tim",updatedDate : "Wed Sep 03 2015 14:37:24 GMT+0530 (India Standard Time)"}
+          ],
+createdDate : "Wed Sep 02 2015 14:37:24 GMT+0530 (India Standard Time)"
+},
+{
+Topic: "JQuery", 
+SubmittedBy: "Zeta", Reviews: 5, Likes: 50,
+Content : [
+            {ContentDetails : "Whats new with JQuey",ReplyBy : "Jim",updatedDate : "Wed Sep 03 2015 14:37:24 GMT+0530 (India Standard Time)"},
+            {ContentDetails : "Why JQuey",ReplyBy : "John",updatedDate : "Wed Sep 04 2015 14:37:24 GMT+0530 (India Standard Time)"}
+],
+createdDate : "Wed Sep 02 2015 14:37:24 GMT+0530 (India Standard Time)"
+}
 ]

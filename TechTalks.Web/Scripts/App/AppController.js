@@ -25,22 +25,22 @@
         $scope.latestDates = function () {
             var dates = [];
             angular.forEach($scope.discussions, function (c) {
-                dates.push(c.updatedDate);
+                dates.push(c.createdDate);
             });
-            var SortedDates = dates.sort();
+            var SortedDates = dates.sort().reverse();
             latestDate = SortedDates[0].toString();
             return latestDate;
         }
 
         $scope.latesReply = function () {
-            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latestDate })[0];
+            var replyResult = $filter('filter')($scope.discussions, { createdDate: latestDate })[0];
 
             return replyResult.ReplyBy;
         }
 
 
         $scope.latestPostedBy = function () {
-            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latestDate })[0];
+            var replyResult = $filter('filter')($scope.discussions, { createdDate: latestDate })[0];
 
             return replyResult.SubmittedBy;
         }
