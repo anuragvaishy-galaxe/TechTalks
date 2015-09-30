@@ -1,24 +1,32 @@
 ﻿@{ ViewBag.Title = "Home Page"; } @section featured {
-<div class="pad-section">
-    <div class="container-fluid">
+<div class="pad-section" ng-app="app">
+    <div class="container-fluid" ng-controller="appController">
         <div class="row">
             <div class="col-sm">
+
                 <div class="panel panel-default" style="min-height: 230px;">
                     <div class="panel-heading">
                         <h2 class="panel-title" style="font-weight: bold;">
                             <span>General Discussions</span> <span style="float: right; padding-right: 200px;">Latest</span></h2>
-                    </div>
+                    </div>                    
                     <div class="panel-body">
-                        <div class="pull-left">
-                            <a href="#">Read More..</a>
+                        <div class="pull-left">                                                
+                            <div ng-repeat="topic in discussions | orderBy:'updatedDate'">
+                            <h3>{{topic.Topic}}  </h3>                            
+                            <a href="#" ng-click="showReviewContent = !showReviewContent">Read More..</a>
+                            <div ng-show="showReviewContent">
+                            <h4>{{topic.Content}}</h4>                            
+                            </div>
+                            </div>
+                            
                         </div>
                         <div style="float: right; padding-right: 170px;">
                             <p>
-                                <a href="#">Reply:</a>
+                                <a href="#">Reply: {{latesReply()}}</a>
                                 <br />
-                                <a href="#">Posted BY</a>
+                                <a href="#">Posted BY : {{latestPostedBy()}}</a>
                                 <br />
-                                <a href="#">Posted Date</a>
+                                <a href="#">Posted Date : {{latesDate()}}</a>
                             </p>
                         </div>
                     </div>

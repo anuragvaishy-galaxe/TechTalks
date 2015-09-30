@@ -55,8 +55,8 @@ angular.module('app').service("TechService",function(){
 })();
 
 var discussions = [
-{ Topic: "AngularJS Discussion", SubmittedBy: "Girish", Reviews: 5, Likes: 50,Content : "Whats new with Angular" },
-{ Topic: "OWIN and KATANA", SubmittedBy: "Anurag", Reviews: 5, Likes: 30, Content: "Lets Discuss OWIN and KATANA" },
-{ Topic: "SOLID Principles", SubmittedBy: "Sushil", Reviews: 6, Likes: 150, Content: "Basic SOLID Principles" },
-{ Topic: "JQuery", SubmittedBy: "Sharad", Reviews: 7, Likes: 300, Content: "JQuer OR AngularJS" }
+{ Topic: "AngularJS Discussion", SubmittedBy: "Aura", Reviews: 5, Likes: 50,Content : "Whats new with Angular",ReplyBy : "Jim",createdDate : "2010/01/01",updatedDate : "2010/09/02"},
+{ Topic: "OWIN and KATANA", SubmittedBy: "Kanny", Reviews: 5, Likes: 30, Content: "Lets Discuss OWIN and KATANA",ReplyBy : "Doe",createdDate : "2010/10/10",updatedDate : "2010/08/01" },
+{ Topic: "SOLID Principles", SubmittedBy: "Jim", Reviews: 6, Likes: 150, Content: "Basic SOLID Principles",ReplyBy : "Kanny",createdDate : "2010/11/11",updatedDate : "2010/11/12" },
+{ Topic: "JQuery", SubmittedBy: "Doe", Reviews: 7, Likes: 300, Content: "JQuer OR AngularJS",ReplyBy : "Aura",createdDate : "2010/10/03",updatedDate : "2010/11/04"}
 ]

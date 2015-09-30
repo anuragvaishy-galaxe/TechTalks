@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('app').controller("appController", function ($scope, TechService) {
+    angular.module('app').controller("appController", function ($scope, $filter, TechService) {
         $scope.Topics = TechService.getAllTopics;
 
         $scope.name = TechService.name;
@@ -22,10 +22,42 @@
 
         };
 
-        $scope.ContentDetails;
+        $scope.latesDate;
+        $scope.latesDate = function () {
+            var dates = [];
+            angular.forEach($scope.discussions, function (c) {
+                dates.push(c.updatedDate);
+                latesDates = c.updatedDate;
+            });
+            var latesDates = dates.sort();
+            latesDate = latesDates[0].toString();
+            return latesDate;
+        }
 
-        $scope.addNewTopic = function () {
-            $scope.showAddbutton = true;
+        $scope.latesReply = function () {
+            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latesDate })[0];
+
+            return replyResult.ReplyBy;
+        }
+
+
+        $scope.latestPostedBy = function () {
+            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latesDate })[0];
+
+            return replyResult.SubmittedBy;
+        }
+
+
+
+        $scope.showReview = function () {
+            $scope.showReviewContent = true;
+        }
+
+       
+
+
+        function custom_sort(a, b) {
+            return new Date(a.updatedDate).getTime() - new Date(b.updatedDate).getTime();
         }
     });
 

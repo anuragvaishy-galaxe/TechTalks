@@ -277,6 +277,13 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\App\App.js" />
+    <Content Include="Scripts\App\AppController.js" />
+    <Content Include="Scripts\App\AppDirectives.js" />
+    <Content Include="Scripts\App\AppService.js" />
+    <Content Include="Scripts\App\DemoFile.htm" />
+    <Content Include="Scripts\App\LandingPage.html" />
+    <Content Include="Scripts\App\NewPost.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
