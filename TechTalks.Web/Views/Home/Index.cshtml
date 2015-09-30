@@ -26,10 +26,16 @@
                                 <br />
                                 <a href="#">Posted BY : {{latestPostedBy()}}</a>
                                 <br />
-                                <a href="#">Posted Date : {{latesDate()}}</a>
+                                <a href="#">Posted Date : {{latestDates()}}</a>
                             </p>
                         </div>
                     </div>
+                </div>
+                <div>
+                <button ng-click="showNewForm = !showNewForm">Add new topic</button>
+                <div  ng-show="showNewForm">
+                <question-reviews></question-reviews>
+                </div>
                 </div>
             </div>
         </div>

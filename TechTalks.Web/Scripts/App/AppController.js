@@ -4,7 +4,6 @@
 
         $scope.name = TechService.name;
         $scope.discussions = TechService.allDiscussions;
-        //$scope.showAddForm = false;
         $scope.addTopics = function () {
             var itemlist = {
                 "Topic": $scope.TopicHeader,
@@ -22,27 +21,26 @@
 
         };
 
-        $scope.latesDate;
-        $scope.latesDate = function () {
+        $scope.latestDate;
+        $scope.latestDates = function () {
             var dates = [];
             angular.forEach($scope.discussions, function (c) {
                 dates.push(c.updatedDate);
-                latesDates = c.updatedDate;
             });
-            var latesDates = dates.sort();
-            latesDate = latesDates[0].toString();
-            return latesDate;
+            var SortedDates = dates.sort();
+            latestDate = SortedDates[0].toString();
+            return latestDate;
         }
 
         $scope.latesReply = function () {
-            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latesDate })[0];
+            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latestDate })[0];
 
             return replyResult.ReplyBy;
         }
 
 
         $scope.latestPostedBy = function () {
-            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latesDate })[0];
+            var replyResult = $filter('filter')($scope.discussions, { updatedDate: latestDate })[0];
 
             return replyResult.SubmittedBy;
         }
@@ -53,7 +51,9 @@
             $scope.showReviewContent = true;
         }
 
-       
+        $scope.ShowAddForm = function () {
+            $scope.showNewForm = true;
+        };
 
 
         function custom_sort(a, b) {
