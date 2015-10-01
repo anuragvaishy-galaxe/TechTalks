@@ -13,7 +13,13 @@
                 "Content": $scope.TopicContent
             };
 
+            $scope.TopicHeader = '';
+            $scope.TopicSubmittedBy = '';
+            $scope.TopicContent = '';
+
             TechService.addTopics(itemlist);
+
+            $scope.showNewForm = false;
         }
         $scope.getDetails = function (item) {
 
@@ -51,9 +57,6 @@
             $scope.showReviewContent = true;
         }
 
-        $scope.ShowAddForm = function () {
-            $scope.showNewForm = true;
-        };
 
 
         function custom_sort(a, b) {

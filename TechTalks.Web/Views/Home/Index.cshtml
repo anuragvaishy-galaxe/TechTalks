@@ -1,127 +1,133 @@
 ﻿@{ ViewBag.Title = "Home Page"; } @section featured {
-<div class="pad-section" ng-app="app">
-    <div class="container-fluid" ng-controller="appController">
-        <div class="row">
-            <div class="col-sm">
+    <div class="pad-section" ng-app="app">
+        <div class="container-fluid" ng-controller="appController">
+            <div class="row">
+                <div class="col-sm">
 
-                <div class="panel panel-default" style="min-height: 230px;">
-                    <div class="panel-heading">
-                        <h2 class="panel-title" style="font-weight: bold;">
-                            <span>General Discussions</span> <span style="float: right; padding-right: 200px;">Latest</span></h2>
-                    </div>  
-                                      
-                    <div class="panel-body">
-                        <div class="pull-left">                                                
-                            <div ng-repeat="topic in discussions | orderBy:'updatedDate':true">
-                            <h3>{{topic.Topic}}  </h3>  
-                            <div style="float: right; padding-right: 170px;">
-                            <p>
-                                <a href="#">Posted BY : {{topic.SubmittedBy}}</a>
-                                <br />
-                                <a href="#">Posted Date : {{topic.createdDate}}</a>
-                            </p>
-                            </div>
-                            <a href="#" ng-click="showReviewContent = !showReviewContent">Read More..</a>
-                            <div ng-show="showReviewContent" ng-repeat="contents in topic.Content">
-                            <h4>{{contents.ContentDetails}}</h4> 
-                            
-                            <p>
-                                <a href="#">Reply: {{contents.ReplyBy}}</a>
-                                <br />
-                                <a href="#">Posted Date : {{contents.updatedDate}}</a>
-                                
-                            </p>
-                                                   
-                            </div>
-                            </div>
-                            
+                    <div class="panel panel-default" style="min-height: 230px;">
+                        <div class="panel-heading">
+                            <h2 class="panel-title" style="font-weight: bold;">
+                                <span>General Discussions</span> <span style="float: right; padding-right: 200px;">Latest</span>
+                            </h2>
                         </div>
-                      @*  <div style="float: right; padding-right: 170px;">
-                            <p>
-                                <a href="#">Reply: {{latesReply()}}</a>
-                                <br />
-                                <a href="#">Posted BY : {{latestPostedBy()}}</a>
-                                <br />
-                                <a href="#">Posted Date : {{latestDates()}}</a>
-                            </p>
-                        </div>*@
-                    </div>
-                </div>
-                <div>
-                <button ng-click="showNewForm = !showNewForm">Add new topic</button>
-                <br />
-                <p>
-                <br />
-                <div  ng-show="showNewForm">
-    <div class="row">
-        <div class="col-sm">
-            <div class="panel panel-default style="min-height: 230px;">
-                <div class="panel-heading"> <strong class="">New Topic</strong>
 
-                </div>
-                <div class="panel-body" >
-                    <form class="form-horizontal" role="form">
-                    <!--Title -->
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-3 control-label">Title</label>
-                            <div class="col-sm-9">
-                                <input type="text" ng-model="TopicHeader" class="form-control" id="inputTitle" placeholder="Title" required="">
+                        <div class="panel-body">
+                            <div class="pull-left">
+                                <div ng-repeat="topic in discussions | orderBy:'updatedDate':true">
+                                    <h3>{{topic.Topic}}  </h3>
+                                    {{$index % 2 == 1}}
+                                    <div ng-class="$even ? 'alert-warning' : 'alert-error'">{{topic.Topic}}</div>
+                                    <div style="float: right; padding-right: 170px;">
+                                        <p>
+                                            <a href="#">Posted BY : {{topic.SubmittedBy}}</a>
+                                            <br />
+                                            <a href="#">Posted Date : {{topic.createdDate}}</a>
+                                        </p>
+                                    </div>
+                                    <a href="#" ng-click="showReviewContent = !showReviewContent">Read More..</a>
+                                    <div ng-show="showReviewContent" ng-repeat="contents in topic.Content">
+                                        <h4>{{contents.ContentDetails}}</h4>
+
+                                        <p>
+                                            <a href="#">Reply: {{contents.ReplyBy}}</a>
+                                            <br />
+                                            <a href="#">Posted Date : {{contents.updatedDate}}</a>
+
+                                        </p>
+
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <!--Content -->
-                        <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Contents</label>
-                            <div class="col-sm-9">
-                                <input type=text ng-model="TopicContent" class="form-control" id="inputContents" placeholder="Contents" required="">
-                            </div>
-                        </div>
-                        <!--Submitted By -->
-                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Submitted By: </label>
-                            <div class="col-sm-9">
-                                <input type=text ng-model="TopicSubmittedBy" class="form-control" id="inputSubmittedBy" placeholder="Submitted" required="">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group last">
-                            <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-success btn-sm" ng-click="addTopics()">Submit</button>
-                                <button type="reset" class="btn btn-default btn-sm">Cancel</button>
-                            </div>
-                        </div>
-                    </form>               
-            </div>
-        </div>
-    </div>
-</div>
-                </div>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="panel panel-default" style="min-height: 230px;">
-                    <div class="panel-heading">
-                        <h2 class="panel-title" style="font-weight: bold;">
-                            <span>Data Access</span><span style="float: right; padding-right: 200px;">Latest</span></h2>
-                    </div>
-                    <div class="panel-body">
-                        <div class="pull-left">
-                            <a href="#">Read More..</a>
-                        </div>
-                        <div style="float: right; padding-right: 170px;">
-                            <p>
-                                <a href="#">Reply:</a>
-                                <br />
-                                <a href="#">Posted BY</a>
-                                <br />
-                                <a href="#">Posted Date</a>
-                            </p>
+                            @*  <div style="float: right; padding-right: 170px;">
+                                    <p>
+                                        <a href="#">Reply: {{latesReply()}}</a>
+                                        <br />
+                                        <a href="#">Posted BY : {{latestPostedBy()}}</a>
+                                        <br />
+                                        <a href="#">Posted Date : {{latestDates()}}</a>
+                                    </p>
+                                </div>*@
                         </div>
                     </div>
+                    <div>
+                        <button ng-click="showNewForm = true">Add new topic</button>
+                        <br />
+                        <p>
+                            <br />
+                            <div ng-show="showNewForm">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="panel panel-default style=" min-height 230px;">
+                                            <div class="panel-heading">
+                                                <strong class="">New Topic</strong>
+
+                                            </div>
+                                            <div class="panel-body">
+                                                <form class="form-horizontal" role="form" ng-submit="addTopics()">
+                                                    <!--Title -->
+                                                    <div class="form-group">
+                                                        <label for="inputEmail3" class="col-sm-3 control-label">Title</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" ng-model="TopicHeader" class="form-control" id="inputTitle" placeholder="Title" required>
+                                                        </div>
+                                                    </div>
+                                                    <!--Content -->
+                                                    <div class="form-group">
+                                                        <label for="inputPassword3" class="col-sm-3 control-label">Contents</label>
+                                                        <div class="col-sm-9">
+                                                            <input type=text ng-model="TopicContent" class="form-control" id="inputContents" placeholder="Contents" required>
+                                                        </div>
+                                                    </div>
+                                                    <!--Submitted By -->
+                                                    <div class="form-group">
+                                                        <label for="inputPassword3" class="col-sm-3 control-label">Submitted By: </label>
+                                                        <div class="col-sm-9">
+                                                            <input type=text ng-model="TopicSubmittedBy" maxlength="100" class="form-control" id="inputSubmittedBy" placeholder="Submitted" >
+                                                            <div class="pull-right">Characters remaining : <div ng-bind="100 - TopicSubmittedBy.length"></div></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group last">
+                                                        <div class="col-sm-offset-3 col-sm-9">
+                                                            <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                                                            <button type="reset" ng-click="showNewForm = !showNewForm" class="btn btn-default btn-sm">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="panel panel-default" style="min-height: 230px;">
+                            <div class="panel-heading">
+                                <h2 class="panel-title" style="font-weight: bold;">
+                                    <span>Data Access</span><span style="float: right; padding-right: 200px;">Latest</span>
+                                </h2>
+                            </div>
+                            <div class="panel-body">
+                                <div class="pull-left">
+                                    <a href="#">Read More..</a>
+                                </div>
+                                <div style="float: right; padding-right: 170px;">
+                                    <p>
+                                        <a href="#">Reply:</a>
+                                        <br />
+                                        <a href="#">Posted BY</a>
+                                        <br />
+                                        <a href="#">Posted Date</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-} 
+}
